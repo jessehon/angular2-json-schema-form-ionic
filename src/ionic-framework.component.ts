@@ -91,9 +91,9 @@ export class IonicFrameworkComponent implements OnInit, OnChanges {
       }
 
       if (
-        !['$ref', 'advancedfieldset', 'authfieldset', 'button', 'card',
+        !_.includes(['$ref', 'advancedfieldset', 'authfieldset', 'button', 'card',
           'checkbox', 'expansion-panel', 'help', 'message', 'msg', 'section',
-          'submit', 'tabarray', 'tabs'].includes(this.layoutNode.type) &&
+          'submit', 'tabarray', 'tabs'], this.layoutNode.type) &&
         /{{.+?}}/.test(this.widgetOptions.title || '')
       ) {
         this.dynamicTitle = this.widgetOptions.title;
