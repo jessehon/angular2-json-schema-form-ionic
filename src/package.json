@@ -21,7 +21,9 @@
   "jsnext:main": "angular2-json-schema-form-ionic.js",
   "typings": "angular2-json-schema-form-ionic.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.3",
+    "angular2-json-schema-form": "^0.6.0-alpha.7",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   }
