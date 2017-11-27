@@ -5,3 +5,4 @@ export const IONIC_FRAMEWORK_COMPONENTS = [
 ];
 
 export { IonicButtonComponent } from './ionic-button.component';
+export { IonicFrameworkModule } from './ionic-framework.module';
