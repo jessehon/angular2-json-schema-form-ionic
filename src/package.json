@@ -1,0 +1,28 @@
+{
+  "name": "angular2-json-schema-form-ionic",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jessehon/angular2-json-schema-form-ionic"
+  },
+  "author": {
+    "name": "Jesse Hon",
+    "email": "jesse@jessehon.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessehon/angular2-json-schema-form-ionic/issues"
+  },
+  "main": "angular2-json-schema-form-ionic.umd.js",
+  "module": "angular2-json-schema-form-ionic.js",
+  "jsnext:main": "angular2-json-schema-form-ionic.js",
+  "typings": "angular2-json-schema-form-ionic.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
