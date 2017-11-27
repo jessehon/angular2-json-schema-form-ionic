@@ -1,35 +1,7 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SampleComponent } from './sample.component';
-import { SampleDirective } from './sample.directive';
-import { SamplePipe } from './sample.pipe';
-import { SampleService } from './sample.service';
+import { IonicButtonComponent } from './ionic-button.component';
 
-export * from './sample.component';
-export * from './sample.directive';
-export * from './sample.pipe';
-export * from './sample.service';
+export const IONIC_FRAMEWORK_COMPONENTS = [
+  IonicButtonComponent,
+];
 
-@NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
-  ],
-  exports: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
-  ]
-})
-export class SampleModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: SampleModule,
-      providers: [SampleService]
-    };
-  }
-}
+export { IonicButtonComponent } from './ionic-button.component';
