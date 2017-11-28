@@ -20,6 +20,7 @@ export const IONIC_FRAMEWORK_COMPONENTS = [
   ],
   declarations: [ ...IONIC_FRAMEWORK_COMPONENTS ],
   exports: [ ...IONIC_FRAMEWORK_COMPONENTS ],
+  entryComponents: [ ...IONIC_FRAMEWORK_COMPONENTS ],
   providers: [ JsonSchemaFormService ],
 })
 export class IonicFrameworkModule { }
