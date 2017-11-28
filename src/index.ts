@@ -1,9 +1,3 @@
-import { IonicButtonComponent } from './ionic-button.component';
-
-export const IONIC_FRAMEWORK_COMPONENTS = [
-  IonicButtonComponent,
-];
-
 export { IonicButtonComponent } from './ionic-button.component';
 export { IonicFrameworkComponent } from './ionic-framework.component';
-export { IonicFrameworkModule } from './ionic-framework.module';
+export { IonicFrameworkModule, IONIC_FRAMEWORK_COMPONENTS } from './ionic-framework.module';

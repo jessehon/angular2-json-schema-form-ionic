@@ -4,6 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { JsonSchemaFormService, WidgetLibraryModule } from 'angular2-json-schema-form';
 import { IonicModule } from 'ionic-angular';
 import { IonicButtonComponent } from './ionic-button.component';
+import { IonicFrameworkComponent } from './ionic-framework.component';
+
+export const IONIC_FRAMEWORK_COMPONENTS = [
+  IonicButtonComponent,
+  IonicFrameworkComponent,
+];
 
 @NgModule({
   imports: [
@@ -12,14 +18,8 @@ import { IonicButtonComponent } from './ionic-button.component';
     IonicModule,
     WidgetLibraryModule,
   ],
-  declarations: [
-    IonicButtonComponent,
-  ],
-  exports: [
-    IonicButtonComponent,
-  ],
-  providers: [
-    JsonSchemaFormService,
-  ]
+  declarations: [ ...IONIC_FRAMEWORK_COMPONENTS ],
+  exports: [ ...IONIC_FRAMEWORK_COMPONENTS ],
+  providers: [ JsonSchemaFormService ],
 })
 export class IonicFrameworkModule { }
