@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { IonicFrameworkComponent, IonicButtonComponent } from 'angular2-json-schema-form-ionic';
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'render-schema',
+  templateUrl: 'render-schema.html'
 })
-export class HomePage {
-  stringRendered: String  = "Test";
+export class RenderSchemaPage {
   schema: any;
   framework: any;
   constructor(public navCtrl: NavController) {
