@@ -3,26 +3,26 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { App } from './app.component';
+import { RenderSchemaPage } from '../pages/render-schema/render-schema';
 import { FrameworkLibraryModule, JsonSchemaFormModule } from 'angular2-json-schema-form';
 import { IonicFrameworkModule } from 'angular2-json-schema-form-ionic';
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    App,
+    RenderSchemaPage
   ],
   imports: [
     BrowserModule,
     JsonSchemaFormModule,
     IonicFrameworkModule,
     FrameworkLibraryModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(App)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage
+    App,
+    RenderSchemaPage
   ],
   providers: [
     StatusBar,
