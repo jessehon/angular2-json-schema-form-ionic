@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { IonicFrameworkComponent, IonicButtonComponent } from 'angular2-json-schema-form-ionic';
+import { IonicFrameworkComponent, IonicButtonComponent, IonicInputComponent } from 'angular2-json-schema-form-ionic';
 @Component({
   selector: 'render-schema',
   templateUrl: 'render-schema.html'
@@ -13,29 +13,26 @@ export class RenderSchemaPage {
       framework: IonicFrameworkComponent,
       widgets: {
         'button': IonicButtonComponent,
+        'text': IonicInputComponent
       }
     };
-
     this.schema = {
       "name": "measurement",
       "schema": {
-        "type": "object",
-        "properties": {
-          "prop1" : {
-            "type": "string"
-          },
-          "prop2" : {
-            "type": "string"
-          },
-        }
+        "prop1" : {
+          "title": "OK"
+        },
+        "prop2" : {
+          "type": "string"
+        },
       },
       "form": [
-        'prop1',
+        {
+          "type": "button",
+          "title": "OK"
+        },
         'prop2'
-      ],
-      "model": {
-        "assetMeters": []
-      }
+      ]
     }
   }
   ionViewDidLoad() {
