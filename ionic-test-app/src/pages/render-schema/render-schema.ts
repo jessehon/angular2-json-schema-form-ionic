@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { IonicFrameworkComponent, IonicButtonComponent, IonicInputComponent } from 'angular2-json-schema-form-ionic';
+import { IonicFrameworkComponent, 
+  IonicButtonComponent, 
+  IonicInputComponent, 
+  IonicCheckboxComponent, 
+  IonicSelectComponent, 
+  IonicTextareaComponent } from 'angular2-json-schema-form-ionic';
+
 @Component({
   selector: 'render-schema',
   templateUrl: 'render-schema.html'
@@ -13,25 +19,58 @@ export class RenderSchemaPage {
       framework: IonicFrameworkComponent,
       widgets: {
         'button': IonicButtonComponent,
-        'text': IonicInputComponent
+        'text': IonicInputComponent,
+        'select': IonicSelectComponent,
+        'textarea': IonicTextareaComponent,
+        'checkbox': IonicCheckboxComponent,
+        'submit': 'button',
       }
     };
     this.schema = {
-      "name": "measurement",
+      "name": "test",
       "schema": {
-        "prop1" : {
-          "title": "OK"
+        "textinput" : {
+          "type": "string",
+          "title": "Text Input"
         },
-        "prop2" : {
-          "type": "string"
+        "checkinput" : {
+          "type": "boolean",
+          "title": "Check Input"
+        },
+        "textareainput" : {
+          "type": "string",
+          "title": "Textarea Input"
+        },
+        "selectinput" : {
+          "type": "string",
+          "title": "Select Input"
         },
       },
       "form": [
+        "textinput",
+        "checkinput",
         {
-          "type": "button",
-          "title": "OK"
+          "key": "selectinput",
+          "type": "select",
+          "titleMap": [
+            {
+              "value": "a",
+              "name": "A"
+            },
+            {
+              "value": "b",
+              "name": "B"
+            },
+            {
+              "value": "c",
+              "name": "C"
+            }
+          ]
         },
-        'prop2'
+        {
+          "key": "textareainput",
+          "type": "textarea"
+        }
       ]
     }
   }
