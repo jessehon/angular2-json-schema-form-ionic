@@ -1,27 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
-
 import { JsonSchemaFormService, hasOwn } from 'angular2-json-schema-form';
 
 @Component({
   selector: 'ionic-button-widget',
-  template: `
-    <div [class]="options?.htmlClass || ''">
-      <button ion-button
-        [attr.readonly]="options?.readonly ? 'readonly' : null"
-        [attr.aria-describedby]="'control' + layoutNode?._id + 'Status'"
-        [color]="options?.color || 'primary'"
-        [disabled]="controlDisabled || options?.readonly"
-        [id]="'control' + layoutNode?._id"
-        [name]="controlName"
-        [type]="layoutNode?.type"
-        [value]="controlValue"
-        (click)="updateValue($event)"
-      >
-        <ion-icon *ngIf="options?.icon" [name]="options?.icon"></ion-icon>
-        <span *ngIf="options?.title" [innerHTML]="options?.title"></span>
-      </button>
-    </div>`,
+  templateUrl: 'ionic-button.template.html',
 })
 export class IonicButtonComponent implements OnInit {
   formControl: AbstractControl;
