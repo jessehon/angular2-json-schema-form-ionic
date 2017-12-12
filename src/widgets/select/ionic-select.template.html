@@ -1,0 +1,10 @@
+<ion-item>
+    <ion-label *ngIf="options?.title" [attr.for]="'control' + layoutNode?._id" [class]="options?.labelHtmlClass || ''" [style.display]="options?.notitle ? 'none' : ''"
+        [innerHTML]="options?.title" fixed>
+    </ion-label>
+    <ion-select [(ngModel)]="controlValue">
+            <ion-option *ngFor="let selectItem of selectList" [selected]="selectItem?.value === controlValue" [value]="selectItem?.value">
+                <span [innerHTML]="selectItem?.name"></span>
+            </ion-option>
+    </ion-select>
+</ion-item>
