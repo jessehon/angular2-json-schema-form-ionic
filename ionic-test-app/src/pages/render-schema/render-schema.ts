@@ -14,6 +14,7 @@ import { IonicFrameworkComponent,
 export class RenderSchemaPage {
   schema: any;
   framework: any;
+  model: any;
   constructor(public navCtrl: NavController) {
     this.framework = {
       framework: IonicFrameworkComponent,
@@ -26,6 +27,11 @@ export class RenderSchemaPage {
         'submit': 'button',
       }
     };
+    this.model = {
+      textinput: "textinputvalue",
+      selectinput: "b",
+      checkinput: true
+    }
     this.schema = {
       "name": "test",
       "schema": {
@@ -73,6 +79,12 @@ export class RenderSchemaPage {
         }
       ]
     }
+  }
+  onSubmit(data: any){
+    console.log(data);
+  }
+  onChange(data: any){
+    console.log(data);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SchemaFormViewerPage');
