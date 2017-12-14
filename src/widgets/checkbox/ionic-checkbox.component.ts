@@ -28,12 +28,14 @@ export class IonicCheckboxComponent implements OnInit {
     console.log(this.options);
     this.jsf.initializeControl(this);
     if (this.controlValue === null || this.controlValue === undefined) {
-      this.controlValue = this.falseValue;
+      this.controlValue = false;
+      this.jsf.updateValue(this, this.falseValue);
     }
   }
 
-  updateValue() {
-    this.jsf.updateValue(this, this.jsf.getFormControlValue(this) === this.trueValue ? this.trueValue : this.falseValue);
+  updateValue(value) {
+    this.options.showErrors = true;
+    this.jsf.updateValue(this, value? this.trueValue : this.falseValue);
   }
 
   get isChecked() {
