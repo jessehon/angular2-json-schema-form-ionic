@@ -2,5 +2,7 @@
     <ion-label *ngIf="options?.title" [attr.for]="'control' + layoutNode?._id" [class]="options?.labelHtmlClass || ''" [style.display]="options?.notitle ? 'none' : ''"
         [innerHTML]="options?.title" fixed>
     </ion-label>
-    <ion-checkbox [(ngModel)]="this.controlValue" [disabled]="controlDisabled" (ionChange)="updateValue($event)" [id]="'control' + layoutNode?._id"></ion-checkbox>
+    <ion-checkbox [(ngModel)]="controlValue" [disabled]="controlDisabled" (ionChange)="updateValue($event.value)" [id]="'control' + layoutNode?._id"></ion-checkbox>
+    
 </ion-item>
+<div *ngIf="options?.showErrors && options?.errorMessage" [innerHTML]="options?.errorMessage"></div>
