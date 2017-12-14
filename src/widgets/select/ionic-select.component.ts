@@ -32,7 +32,7 @@ export class IonicSelectComponent implements OnInit {
     this.jsf.initializeControl(this);
   }
 
-  updateValue(event) {
-    this.jsf.updateValue(this, event.target.value);
+  updateValue(value) {
+    this.jsf.updateValue(this, value);
   }
 }
