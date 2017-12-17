@@ -69,4 +69,4 @@ $ npm run lint
 
 ## License
 
-MIT © [Jesse Hon](mailto:jesse@jessehon.com)
+MIT ©

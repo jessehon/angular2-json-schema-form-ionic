@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Schema Form Test
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <json-schema-form [form]="schema" [framework]="framework" [(model)]="model" (onSubmit)="onSubmit($event)" (onChanges)="onChange($event)" >
+  </json-schema-form>
+</ion-content>

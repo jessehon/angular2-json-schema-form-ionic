@@ -1,4 +1,5 @@
 # Node
+node_modules/
 node_modules/*
 npm-debug.log
 
@@ -33,3 +34,19 @@ dist/*
 
 # Playground tmp files
 .playground
+
+.idea/
+.sourcemaps/
+.sass-cache/
+.tmp/
+.versions/
+coverage/
+tmp/
+temp/
+hooks/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
+www/
+$RECYCLE.BIN/
