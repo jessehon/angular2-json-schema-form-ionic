@@ -6,4 +6,6 @@
         [attr.readonly]="options?.readonly ? 'readonly' : null" [attr.required]="options?.required" [class]="options?.fieldHtmlClass || ''"
         [id]="'control' + layoutNode?._id" ></ion-textarea>
 </ion-item>
-<div *ngIf="options?.showErrors && options?.errorMessage" [innerHTML]="options?.errorMessage"></div>
+<ion-item *ngIf="options?.showErrors && options?.errorMessage">
+    <p [innerHTML]="options?.errorMessage"></p>
+</ion-item>
