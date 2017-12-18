@@ -33,6 +33,7 @@ export class IonicSelectComponent implements OnInit {
   }
 
   updateValue(value) {
+    this.options.showErrors = true;
     this.jsf.updateValue(this, value);
   }
 }
