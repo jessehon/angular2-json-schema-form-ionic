@@ -9,6 +9,7 @@ import { IonicSelectComponent } from './widgets/select/ionic-select.component';
 import { IonicCheckboxComponent } from './widgets/checkbox/ionic-checkbox.component';
 import { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.component';
 import { IonicFrameworkComponent } from './ionic-framework.component';
+import { IonicTabsComponent } from './widgets/tabs/ionic-tabs.component';
 
 export const IONIC_FRAMEWORK_COMPONENTS = [
   IonicButtonComponent,
@@ -17,6 +18,7 @@ export const IONIC_FRAMEWORK_COMPONENTS = [
   IonicTextareaComponent,
   IonicSelectComponent,
   IonicFrameworkComponent,
+  IonicTabsComponent,
 ];
 
 @NgModule({

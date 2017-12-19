@@ -4,4 +4,5 @@ export { IonicCheckboxComponent } from './widgets/checkbox/ionic-checkbox.compon
 export { IonicFrameworkComponent } from './ionic-framework.component';
 export { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.component';
 export { IonicSelectComponent } from './widgets/select/ionic-select.component';
+export { IonicTabsComponent } from './widgets/tabs/ionic-tabs.component';
 export { IonicFrameworkModule, IONIC_FRAMEWORK_COMPONENTS } from './ionic-framework.module';
