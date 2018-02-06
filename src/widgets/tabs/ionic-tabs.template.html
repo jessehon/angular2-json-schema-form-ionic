@@ -1,18 +1,12 @@
-<ul
-[class]="options?.labelHtmlClass || ''">
-<li *ngFor="let item of layoutNode?.items; let i = index"
-  [class]="(options?.itemLabelHtmlClass || '') + (selectedItem === i ?
-    (' ' + (options?.activeClass || '') + ' ' + (options?.style?.selected || '')) :
-    (' ' + options?.style?.unselected))"
-  role="presentation"
-  data-tabs>
-  <a *ngIf="showAddTab || item.type !== '$ref'"
-     [class]="'nav-link' + (selectedItem === i ? (' ' + options?.activeClass + ' ' + options?.style?.selected) :
-      (' ' + options?.style?.unselected))"
-    [innerHTML]="setTabTitle(item, i)"
-    (click)="select(i)"></a>
-</li>
-</ul>
+<ion-segment>
+  <ion-segment-button 
+    *ngFor="let item of layoutNode?.items; let i = index"  (click)="select(i)" 
+    [class]=" 'segment-button' +' '+ (selectedItem === i ? ('segment-activated' + ' ' + options?.activeClass + ' ' + options?.style?.selected) :
+    (' ' + options?.style?.unselected))" data-tabs>
+    <a *ngIf="showAddTab || item.type !== '$ref'"
+   [innerHTML]="setTabTitle(item, i)"></a>
+  </ion-segment-button>
+</ion-segment>
 <div *ngFor="let layoutItem of layoutNode?.items; let i = index"
 [class]="options?.htmlClass || ''">
 <select-framework-widget *ngIf="selectedItem === i"

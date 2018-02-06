@@ -4,7 +4,6 @@ import { JsonSchemaFormService, buildTitleMap, isArray  } from 'angular2-json-sc
 @Component({
   selector: 'ionic-tabs-widget',
   templateUrl: 'ionic-tabs.template.html',
-  styles: [` a { cursor: pointer; } `],
 })
 export class IonicTabsComponent implements OnInit {
   options: any;
