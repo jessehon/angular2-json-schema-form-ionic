@@ -8,6 +8,7 @@ import { IonicInputComponent } from './widgets/input/ionic-input.component';
 import { IonicSelectComponent } from './widgets/select/ionic-select.component';
 import { IonicCheckboxComponent } from './widgets/checkbox/ionic-checkbox.component';
 import { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.component';
+import { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
 import { IonicFrameworkComponent } from './ionic-framework.component';
 
 export const IONIC_FRAMEWORK_COMPONENTS = [
@@ -16,6 +17,7 @@ export const IONIC_FRAMEWORK_COMPONENTS = [
   IonicCheckboxComponent,
   IonicTextareaComponent,
   IonicSelectComponent,
+  IonicToggleComponent,
   IonicFrameworkComponent,
 ];
 

@@ -5,7 +5,8 @@ import { IonicFrameworkComponent,
   IonicInputComponent, 
   IonicCheckboxComponent, 
   IonicSelectComponent, 
-  IonicTextareaComponent } from 'angular2-json-schema-form-ionic';
+  IonicTextareaComponent,
+  IonicToggleComponent } from 'angular2-json-schema-form-ionic';
 
 @Component({
   selector: 'render-schema',
@@ -24,6 +25,7 @@ export class RenderSchemaPage {
         'select': IonicSelectComponent,
         'textarea': IonicTextareaComponent,
         'checkbox': IonicCheckboxComponent,
+        'toggle': IonicToggleComponent,
         'submit': 'button',
       }
     };
@@ -35,28 +37,36 @@ export class RenderSchemaPage {
     this.schema = {
       "name": "test",
       "schema": {
-        "textinput" : {
+        "textInput" : {
           "type": "string",
           "title": "Text Input"
         },
-        "checkinput" : {
+        "checkInput" : {
           "type": "boolean",
           "title": "Check Input"
         },
-        "textareainput" : {
+        "toggleInput" : {
+          "type": "boolean",
+          "title": "toggle"
+        },
+        "textareaInput" : {
           "type": "string",
           "title": "Textarea Input"
         },
-        "selectinput" : {
+        "selectInput" : {
           "type": "string",
           "title": "Select Input"
         },
       },
       "form": [
-        "textinput",
-        "checkinput",
+        "textInput",
+        "checkInput",
         {
-          "key": "selectinput",
+          "key": "toggleInput", 
+          "type": "toggle"
+        },
+        {
+          "key": "selectInput",
           "type": "select",
           "titleMap": [
             {
@@ -74,7 +84,7 @@ export class RenderSchemaPage {
           ]
         },
         {
-          "key": "textareainput",
+          "key": "textareaInput",
           "type": "textarea"
         }
       ]
