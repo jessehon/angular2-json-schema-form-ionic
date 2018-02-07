@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { IonicFrameworkComponent, 
-  IonicButtonComponent, 
-  IonicInputComponent, 
-  IonicCheckboxComponent, 
-  IonicSelectComponent, 
-  IonicTextareaComponent } from 'angular2-json-schema-form-ionic';
 
 @Component({
   selector: 'render-schema',
@@ -16,17 +10,6 @@ export class RenderSchemaPage {
   framework: any;
   model: any;
   constructor(public navCtrl: NavController) {
-    this.framework = {
-      framework: IonicFrameworkComponent,
-      widgets: {
-        'button': IonicButtonComponent,
-        'text': IonicInputComponent,
-        'select': IonicSelectComponent,
-        'textarea': IonicTextareaComponent,
-        'checkbox': IonicCheckboxComponent,
-        'submit': 'button',
-      }
-    };
     this.model = {
       textinput: "textinputvalue",
       selectinput: "b",
@@ -35,28 +18,36 @@ export class RenderSchemaPage {
     this.schema = {
       "name": "test",
       "schema": {
-        "textinput" : {
+        "textInput" : {
           "type": "string",
           "title": "Text Input"
         },
-        "checkinput" : {
+        "checkInput" : {
           "type": "boolean",
           "title": "Check Input"
         },
-        "textareainput" : {
+        "toggleInput" : {
+          "type": "boolean",
+          "title": "toggle"
+        },
+        "textareaInput" : {
           "type": "string",
           "title": "Textarea Input"
         },
-        "selectinput" : {
+        "selectInput" : {
           "type": "string",
           "title": "Select Input"
         },
       },
       "form": [
-        "textinput",
-        "checkinput",
+        "textInput",
+        "checkInput",
         {
-          "key": "selectinput",
+          "key": "toggleInput", 
+          "type": "toggle"
+        },
+        {
+          "key": "selectInput",
           "type": "select",
           "titleMap": [
             {
@@ -74,7 +65,7 @@ export class RenderSchemaPage {
           ]
         },
         {
-          "key": "textareainput",
+          "key": "textareaInput",
           "type": "textarea"
         }
       ]
