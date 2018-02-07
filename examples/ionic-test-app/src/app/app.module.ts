@@ -5,8 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { App } from './app.component';
 import { RenderSchemaPage } from '../pages/render-schema/render-schema';
-import { FrameworkLibraryModule, JsonSchemaFormModule } from 'angular2-json-schema-form';
+import { JsonSchemaFormModule } from 'angular2-json-schema-form';
 import { IonicFrameworkModule } from 'angular2-json-schema-form-ionic';
+
 @NgModule({
   declarations: [
     App,
@@ -14,9 +15,8 @@ import { IonicFrameworkModule } from 'angular2-json-schema-form-ionic';
   ],
   imports: [
     BrowserModule,
-    JsonSchemaFormModule,
     IonicFrameworkModule,
-    FrameworkLibraryModule,
+    JsonSchemaFormModule.forRoot(IonicFrameworkModule),
     IonicModule.forRoot(App)
   ],
   bootstrap: [IonicApp],
