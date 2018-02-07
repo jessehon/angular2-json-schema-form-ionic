@@ -6,3 +6,4 @@ export { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.compon
 export { IonicSelectComponent } from './widgets/select/ionic-select.component';
 export { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
 export { IonicFrameworkModule, IONIC_FRAMEWORK_COMPONENTS } from './ionic-framework.module';
+export { IonicFramework } from './ionic-framework';

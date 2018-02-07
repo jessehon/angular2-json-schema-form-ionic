@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { IonicFrameworkComponent, 
-  IonicButtonComponent, 
-  IonicInputComponent, 
-  IonicCheckboxComponent, 
-  IonicSelectComponent, 
-  IonicTextareaComponent,
-  IonicToggleComponent } from 'angular2-json-schema-form-ionic';
 
 @Component({
   selector: 'render-schema',
@@ -17,18 +10,6 @@ export class RenderSchemaPage {
   framework: any;
   model: any;
   constructor(public navCtrl: NavController) {
-    this.framework = {
-      framework: IonicFrameworkComponent,
-      widgets: {
-        'button': IonicButtonComponent,
-        'text': IonicInputComponent,
-        'select': IonicSelectComponent,
-        'textarea': IonicTextareaComponent,
-        'checkbox': IonicCheckboxComponent,
-        'toggle': IonicToggleComponent,
-        'submit': 'button',
-      }
-    };
     this.model = {
       textinput: "textinputvalue",
       selectinput: "b",

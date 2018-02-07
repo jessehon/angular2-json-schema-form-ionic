@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { JsonSchemaFormService, WidgetLibraryModule } from 'angular2-json-schema-form';
+import { Framework, WidgetLibraryModule } from 'angular2-json-schema-form';
 import { IonicModule } from 'ionic-angular';
 import { IonicButtonComponent } from './widgets/button/ionic-button.component';
 import { IonicInputComponent } from './widgets/input/ionic-input.component';
@@ -10,6 +10,7 @@ import { IonicCheckboxComponent } from './widgets/checkbox/ionic-checkbox.compon
 import { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.component';
 import { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
 import { IonicFrameworkComponent } from './ionic-framework.component';
+import { IonicFramework } from './ionic-framework';
 
 export const IONIC_FRAMEWORK_COMPONENTS = [
   IonicButtonComponent,
@@ -30,7 +31,15 @@ export const IONIC_FRAMEWORK_COMPONENTS = [
   ],
   declarations: [ ...IONIC_FRAMEWORK_COMPONENTS ],
   exports: [ ...IONIC_FRAMEWORK_COMPONENTS ],
-  entryComponents: [ ...IONIC_FRAMEWORK_COMPONENTS ],
-  providers: [ JsonSchemaFormService ],
+  entryComponents: [ ...IONIC_FRAMEWORK_COMPONENTS ]
 })
-export class IonicFrameworkModule { }
+export class IonicFrameworkModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: IonicFrameworkModule,
+      providers: [
+        { provide: Framework, useClass: IonicFramework, multi: true }
+      ]
+    };
+  }
+}
