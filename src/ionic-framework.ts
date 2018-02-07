@@ -11,6 +11,7 @@ import { IonicFrameworkComponent } from './ionic-framework.component';
 import { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.component';
 import { IonicSelectComponent } from './widgets/select/ionic-select.component';
 import { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
+import { IonicTabsComponent} from './widgets/tabs/ionic-tabs.component';
 
 @Injectable()
 export class IonicFramework extends Framework {
@@ -27,6 +28,7 @@ export class IonicFramework extends Framework {
     'select':          IonicSelectComponent,
     'text':            IonicInputComponent,
     'textarea':        IonicTextareaComponent,
+    'tabs':            IonicTabsComponent,
     'submit':          'button'
   };
 }
