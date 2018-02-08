@@ -1,0 +1,18 @@
+<ion-list *ngIf="containerType === 'div'" [class]="options?.htmlClass || ''" [class.expandable]="options?.expandable && !expanded"
+    [class.expanded]="options?.expandable && expanded">
+    <label *ngIf="sectionTitle" class="legend" [class]="options?.labelHtmlClass || ''" [innerHTML]="sectionTitle" (click)="toggleExpanded()"></label>
+    <root-widget *ngIf="expanded" [dataIndex]="dataIndex" [layout]="layoutNode.items" [layoutIndex]="layoutIndex" [isOrderable]="options?.orderable"></root-widget>
+</ion-list>
+<ion-list *ngIf="containerType === 'fieldset'" [class]="options?.htmlClass || ''" [class.expandable]="options?.expandable && !expanded"
+    [class.expanded]="options?.expandable && expanded">
+    <legend *ngIf="sectionTitle" class="legend" [class]="options?.labelHtmlClass || ''" [innerHTML]="sectionTitle" (click)="toggleExpanded()"></legend>
+    <div *ngIf="options?.messageLocation !== 'bottom'">
+        <p *ngIf="options?.description" class="help-block" [class]="options?.labelHelpBlockClass || ''" [innerHTML]="options?.description"></p>
+    </div>
+    <root-widget *ngIf="expanded" [dataIndex]="dataIndex" [layout]="layoutNode.items" [layoutIndex]="layoutIndex"
+        [isOrderable]="options?.orderable">
+    </root-widget>
+    <div *ngIf="options?.messageLocation === 'bottom'">
+        <p *ngIf="options?.description" class="help-block" [class]="options?.labelHelpBlockClass || ''" [innerHTML]="options?.description"></p>
+    </div>
+</ion-list>

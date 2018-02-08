@@ -11,6 +11,7 @@ import { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.compon
 import { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
 import { IonicFrameworkComponent } from './ionic-framework.component';
 import { IonicTabsComponent } from './widgets/tabs/ionic-tabs.component';
+import { IonicSectionComponent } from './widgets/section/ionic-section.component';
 import { IonicFramework } from './ionic-framework';
 
 export const IONIC_FRAMEWORK_COMPONENTS = [
@@ -21,6 +22,7 @@ export const IONIC_FRAMEWORK_COMPONENTS = [
   IonicSelectComponent,
   IonicToggleComponent,
   IonicFrameworkComponent,
+  IonicSectionComponent,
   IonicTabsComponent,
 ];
 
