@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { j } from 'angular2-json-schema-form';
 
 @Component({
   selector: 'render-schema',
@@ -11,9 +12,9 @@ export class RenderSchemaPage {
 
   constructor(public navCtrl: NavController) {
     this.model = {
-      textinput: "textinputvalue",
-      selectinput: "b",
-      checkinput: true
+      textInput: "text value",
+      selectInput: "b",
+      checkInput: true,
     }
     this.schema = {
       "name": "test",
