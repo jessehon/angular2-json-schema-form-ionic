@@ -1,6 +1,10 @@
 # angular2-json-schema-form-ionic
 
+Ionic framework library for the [Angular 2 JSON Schema Form](https://github.com/dschnelldavis/angular2-json-schema-form)
+
 ## Installation
+
+Ensure you have already installed and configured [Ionic](https://github.com/ionic-team/ionic) and [Angular 2 JSON Schema Form](https://github.com/dschnelldavis/angular2-json-schema-form).
 
 To install this library, run:
 
@@ -8,54 +12,43 @@ To install this library, run:
 $ npm install angular2-json-schema-form-ionic --save
 ```
 
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install angular2-json-schema-form-ionic
-```
-
 and then from your Angular `AppModule`:
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-
-// Import your library
-import { SampleModule } from 'angular2-json-schema-form-ionic';
+// Import the library
+...
+import { IonicFrameworkModule } from 'angular2-json-schema-form-ionic';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule,
+    ...
 
-    // Specify your library as an import
-    LibraryModule
+    // Specify the library as an import
+    IonicFrameworkModule,
+
+    // Configure angular2-json-schema-form to load the IonicFrameworkModule
+    JsonSchemaFormModule.forRoot(IonicFrameworkModule),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ...
 })
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once the library is imported, you can use angular2-json-schema-form as normal and components should
+be replaced with their Ionic counterparts:
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+```html
+<!-- You can now use the library component in a template -->
+<ionic-content>
+  <json-schema-form [form]="schema" [(model)]="model">
+  </json-schema-form>
+</ionic-content>
 ```
 
 ## Development
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
+To generate the library for distribution
 
 ```bash
 $ npm run build
