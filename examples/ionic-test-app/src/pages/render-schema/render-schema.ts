@@ -7,8 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class RenderSchemaPage {
   schema: any;
-  framework: any;
   model: any;
+
   constructor(public navCtrl: NavController) {
     this.model = {
       textinput: "textinputvalue",
@@ -43,7 +43,7 @@ export class RenderSchemaPage {
         "textInput",
         "checkInput",
         {
-          "key": "toggleInput", 
+          "key": "toggleInput",
           "type": "toggle"
         },
         {
