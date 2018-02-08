@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { Framework } from  'angular2-json-schema-form';
 
-// Material Design Framework
-// https://github.com/angular/material2
 import { IonicButtonComponent } from './widgets/button/ionic-button.component';
 import { IonicInputComponent } from './widgets/input/ionic-input.component';
 import { IonicCheckboxComponent } from './widgets/checkbox/ionic-checkbox.component';
