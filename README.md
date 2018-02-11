@@ -41,7 +41,7 @@ be replaced with their Ionic counterparts:
 ```html
 <!-- You can now use the library component in a template -->
 <ionic-content>
-  <json-schema-form [form]="schema" [(model)]="model">
+  <json-schema-form [form]="schema" [model]="model">
   </json-schema-form>
 </ionic-content>
 ```
