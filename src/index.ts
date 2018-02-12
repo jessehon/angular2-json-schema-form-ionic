@@ -6,5 +6,7 @@ export { IonicTextareaComponent } from './widgets/textarea/ionic-textarea.compon
 export { IonicSelectComponent } from './widgets/select/ionic-select.component';
 export { IonicTabsComponent } from './widgets/tabs/ionic-tabs.component';
 export { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
+export { IonicSectionComponent } from './widgets/section/ionic-section.component';
+export { IonicRootComponent } from './widgets/root/ionic-root.component';
 export { IonicFrameworkModule, IONIC_FRAMEWORK_COMPONENTS } from './ionic-framework.module';
 export { IonicFramework } from './ionic-framework';
