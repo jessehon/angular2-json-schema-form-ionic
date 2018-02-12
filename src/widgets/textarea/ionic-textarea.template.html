@@ -3,7 +3,7 @@
         [innerHTML]="options?.title" fixed></ion-label>
         <ion-textarea [formControl]="formControl" [attr.aria-describedby]="'control' + layoutNode?._id + 'Status'"
         [attr.maxlength]="options?.maxLength" [attr.minlength]="options?.minLength" [attr.pattern]="options?.pattern" [attr.placeholder]="options?.placeholder"
-        [attr.readonly]="options?.readonly ? 'readonly' : null" [attr.required]="options?.required" [class]="options?.fieldHtmlClass || ''"
+        [readonly]="options?.readonly" [attr.required]="options?.required" [class]="options?.fieldHtmlClass || ''"
         [id]="'control' + layoutNode?._id" ></ion-textarea>
 </ion-item>
 <ion-item *ngIf="options?.showErrors && options?.errorMessage">
