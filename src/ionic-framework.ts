@@ -11,6 +11,7 @@ import { IonicSelectComponent } from './widgets/select/ionic-select.component';
 import { IonicToggleComponent } from './widgets/toggle/ionic-toggle.component';
 import { IonicTabsComponent} from './widgets/tabs/ionic-tabs.component';
 import { IonicSectionComponent} from './widgets/section/ionic-section.component';
+import { IonicRootComponent } from './widgets/root/ionic-root.component';
 
 @Injectable()
 export class IonicFramework extends Framework {
@@ -21,6 +22,7 @@ export class IonicFramework extends Framework {
   stylesheets = [];
 
   widgets = {
+    'root':            IonicRootComponent,
     'section':         IonicSectionComponent,
     'button':          IonicButtonComponent,
     'checkbox':        IonicCheckboxComponent,

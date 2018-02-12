@@ -1,0 +1,7 @@
+<div *ngFor="let layoutItem of layout; let i = index" [style.order]="(layoutItem.options || {}).order">
+    <div [dataIndex]="layoutItem?.arrayItem ? (dataIndex || []).concat(i) : (dataIndex || [])" [layoutIndex]="(layoutIndex || []).concat(i)"
+        [layoutNode]="layoutItem" [orderable]="isDraggable(layoutItem)">
+        <select-framework-widget *ngIf="showWidget(layoutItem)" [dataIndex]="layoutItem?.arrayItem ? (dataIndex || []).concat(i) : (dataIndex || [])"
+            [layoutIndex]="(layoutIndex || []).concat(i)" [layoutNode]="layoutItem"></select-framework-widget>
+    </div>
+</div>
