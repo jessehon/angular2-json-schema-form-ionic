@@ -1,6 +1,12 @@
 <ion-item>
-    <ion-label *ngIf="options?.title" [attr.for]="'control' + layoutNode?._id" [ngClass]="options?.labelHtmlClass || ''" [style.display]="options?.notitle ? 'none' : ''"
-        [innerHTML]="options?.title" floating>
+    <ion-label
+        *ngIf="options?.title"
+        [attr.for]="'control' + layoutNode?._id"
+        [ngClass]="options?.labelHtmlClass || ''"
+        [style.display]="options?.notitle ? 'none' : ''"
+        [innerHTML]="options?.title"
+        stacked
+    >
     </ion-label>
     <ion-input type="text" *ngIf="boundControl" [formControl]="formControl" [attr.aria-describedby]="'control' + layoutNode?._id + 'Status'"
         [attr.list]="'control' + layoutNode?._id + 'Autocomplete'" [attr.maxlength]="options?.maxLength" [attr.minlength]="options?.minLength"
