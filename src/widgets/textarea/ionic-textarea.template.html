@@ -19,6 +19,7 @@
         [attr.required]="options?.required"
         [class]="options?.fieldHtmlClass || ''"
         [id]="'control' + layoutNode?._id"
+        (blur)="updateValue($event)"
     >
     </ion-textarea>
 </ion-item>
