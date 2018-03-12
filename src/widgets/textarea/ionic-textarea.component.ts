@@ -27,6 +27,7 @@ export class IonicTextareaComponent implements OnInit {
   }
 
   updateValue(event) {
+    this.options.showErrors = true;
     this.jsf.updateValue(this, event.target.value);
   }
 }

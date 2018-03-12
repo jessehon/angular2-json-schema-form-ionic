@@ -28,6 +28,7 @@ export class IonicInputComponent implements OnInit {
   }
 
   updateValue(event) {
+    this.options.showErrors = true;
     this.jsf.updateValue(this, event.target.value);
   }
 }

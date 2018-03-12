@@ -8,10 +8,22 @@
         stacked
     >
     </ion-label>
-    <ion-input type="text" *ngIf="boundControl" [formControl]="formControl" [attr.aria-describedby]="'control' + layoutNode?._id + 'Status'"
-        [attr.list]="'control' + layoutNode?._id + 'Autocomplete'" [attr.maxlength]="options?.maxLength" [attr.minlength]="options?.minLength"
-        [attr.pattern]="options?.pattern" [attr.placeholder]="options?.placeholder" [attr.required]="options?.required" [class]="options?.fieldHtmlClass || ''"
-        [id]="'control' + layoutNode?._id" [readonly]="options?.readonly" [type]="layoutNode?.type">
+    <ion-input
+        *ngIf="boundControl"
+        type="text"
+        [formControl]="formControl"
+        [attr.aria-describedby]="'control' + layoutNode?._id + 'Status'"
+        [attr.list]="'control' + layoutNode?._id + 'Autocomplete'"
+        [attr.maxlength]="options?.maxLength"
+        [attr.minlength]="options?.minLength"
+        [attr.pattern]="options?.pattern"
+        [attr.placeholder]="options?.placeholder"
+        [attr.required]="options?.required"
+        [class]="options?.fieldHtmlClass || ''"
+        [id]="'control' + layoutNode?._id"
+        [readonly]="options?.readonly"
+        [type]="layoutNode?.type"
+        (blur)="updateValue($event)">
     </ion-input>
 </ion-item>
 <ion-item *ngIf="options?.showErrors && options?.errorMessage">

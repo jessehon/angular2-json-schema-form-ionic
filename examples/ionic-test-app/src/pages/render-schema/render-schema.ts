@@ -11,48 +11,57 @@ export class RenderSchemaPage {
 
   constructor(public navCtrl: NavController) {
     this.model = {
-      textInput: "text value",
-      checkInput: true,
-      toggleInput: true,
-      textareaInput: "textarea value",
-      selectInput: "b",
     }
 
     this.schema = {
       "name": "test",
       "schema": {
-        "textInput" : {
-          "type": "string",
-          "title": "Text Input"
+        'type': 'object',
+        'properties':{
+          "textInput" : {
+            "type": "string",
+            "title": "Text Input"
+          },
+          "checkInput" : {
+            "type": "boolean",
+            "title": "Check Input"
+          },
+          "toggleInput" : {
+            "type": "boolean",
+            "title": "Toggle Input"
+          },
+          "textareaInput" : {
+            "type": "string",
+            "title": "Textarea Input",
+          },
+          "selectInput" : {
+            "type": "string",
+            "title": "Select Input"
+          },
         },
-        "checkInput" : {
-          "type": "boolean",
-          "title": "Check Input"
-        },
-        "toggleInput" : {
-          "type": "boolean",
-          "title": "Toggle Input"
-        },
-        "textareaInput" : {
-          "type": "string",
-          "title": "Textarea Input"
-        },
-        "selectInput" : {
-          "type": "string",
-          "title": "Select Input"
-        },
+        'required': ["textareaInput", "textInput"]
       },
       "form": [
-        "textInput",
+        {
+          "key": "textInput",
+          "labelPosition": "floating",
+          "validationMessages": {
+            "required": "Text input required"
+          }
+        },
         "checkInput",
         {
           "key": "toggleInput",
           "type": "toggle"
+
         },
 
         {
           "key": "textareaInput",
-          "type": "textarea"
+          "type": "textarea",
+          "validationMessages": {
+            "required": "Text area required"
+          }
         },
         {
           "key": "selectInput",
@@ -71,7 +80,8 @@ export class RenderSchemaPage {
               "name": "C"
             }
           ]
-        }
+        },
+      { 'type': "submit", 'title': "Create" }
       ]
     }
   }
@@ -80,8 +90,5 @@ export class RenderSchemaPage {
   }
   onChange(data: any){
     console.log(data);
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SchemaFormViewerPage');
   }
 }
