@@ -35,7 +35,7 @@ export class IonicCheckboxComponent implements OnInit {
 
   updateValue(value) {
     if (!!this.options.onChange) {
-      this.options.onChange(this.controlValue, this.layoutNode);
+      this.options.onChange(this.controlValue, this);
     }
     this.options.showErrors = true;
     this.jsf.updateValue(this, value? this.trueValue : this.falseValue);
