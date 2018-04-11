@@ -11,7 +11,7 @@ import { JsonSchemaFormService, hasOwn, isArray, isDefined, toTitleCase } from '
       [layoutIndex]="layoutIndex"
       [layoutNode]="widgetLayoutNode"
     >
-      <button *ngIf="showRemoveButton" ion-button (click)="removeItem()">
+      <button *ngIf="showRemoveButton" class="close-button" ion-button (click)="removeItem()">
         <ion-icon name="close"></ion-icon>
       </button>
 
