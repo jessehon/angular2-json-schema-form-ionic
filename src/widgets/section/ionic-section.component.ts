@@ -6,8 +6,8 @@ import { toTitleCase, JsonSchemaFormService } from 'angular2-json-schema-form';
   templateUrl: 'ionic-section.template.html',
   styles: [`
     .legend { font-weight: bold; }
-    .expandable > legend:before, .expandable > label:before  { content: '▶'; padding-right: .3em; }
-    .expanded > legend:before, .expanded > label:before  { content: '▼'; padding-right: .2em; }
+    .expandable > legend:before, .expandable > label:before { content: '▶'; padding-right: .3em; }
+    .expanded > legend:before, .expanded > label:before { content: '▼'; padding-right: .2em; }
   `],
 })
 export class IonicSectionComponent implements OnInit {

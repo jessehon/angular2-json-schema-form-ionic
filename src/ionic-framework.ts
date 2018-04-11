@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Framework } from  'angular2-json-schema-form';
+import { Framework } from 'angular2-json-schema-form';
 
 import { IonicButtonComponent } from './widgets/button/ionic-button.component';
 import { IonicInputComponent } from './widgets/input/ionic-input.component';

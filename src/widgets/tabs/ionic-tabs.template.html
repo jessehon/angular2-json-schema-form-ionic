@@ -1,6 +1,6 @@
 <ion-segment>
   <ion-segment-button
-    *ngFor="let item of layoutNode?.items; let i = index"  (click)="select(i)"
+    *ngFor="let item of layoutNode?.items; let i = index" (click)="select(i)"
     [ngClass]=" 'segment-button' +' '+ (selectedItem === i ? ('segment-activated' + ' ' + options?.activeClass + ' ' + options?.style?.selected) :
     (' ' + options?.style?.unselected))" data-tabs>
     <a *ngIf="showAddTab || item.type !== '$ref'"

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { JsonSchemaFormService, buildTitleMap, isArray  } from 'angular2-json-schema-form';
+import { JsonSchemaFormService, buildTitleMap, isArray } from 'angular2-json-schema-form';
 
 @Component({
   selector: 'ionic-tabs-widget',

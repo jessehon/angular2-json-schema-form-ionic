@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
-import { JsonSchemaFormService, buildTitleMap, isArray  } from 'angular2-json-schema-form';
+import { JsonSchemaFormService, buildTitleMap, isArray } from 'angular2-json-schema-form';
 
 @Component({
   selector: 'select-widget',
