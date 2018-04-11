@@ -2,7 +2,7 @@
     <ion-label
         *ngIf="options?.title"
         [attr.for]="'control' + layoutNode?._id"
-        [class]="options?.labelHtmlClass || ''"
+        [ngClass]="options?.labelHtmlClass || ''"
         [style.display]="options?.notitle ? 'none' : ''"
         [innerHTML]="options?.title"
     >
