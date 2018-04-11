@@ -1,16 +1,16 @@
 <ion-segment>
-  <ion-segment-button 
-    *ngFor="let item of layoutNode?.items; let i = index"  (click)="select(i)" 
-    [class]=" 'segment-button' +' '+ (selectedItem === i ? ('segment-activated' + ' ' + options?.activeClass + ' ' + options?.style?.selected) :
+  <ion-segment-button
+    *ngFor="let item of layoutNode?.items; let i = index"  (click)="select(i)"
+    [ngClass]=" 'segment-button' +' '+ (selectedItem === i ? ('segment-activated' + ' ' + options?.activeClass + ' ' + options?.style?.selected) :
     (' ' + options?.style?.unselected))" data-tabs>
     <a *ngIf="showAddTab || item.type !== '$ref'"
    [innerHTML]="setTabTitle(item, i)"></a>
   </ion-segment-button>
 </ion-segment>
 <div *ngFor="let layoutItem of layoutNode?.items; let i = index"
-[class]="options?.htmlClass || ''">
+[ngClass]="options?.htmlClass || ''">
 <select-framework-widget *ngIf="selectedItem === i"
-  [class]="(options?.fieldHtmlClass || '') +
+  [ngClass]="(options?.fieldHtmlClass || '') +
     ' ' + (options?.activeClass || '') +
     ' ' + (options?.style?.selected || '')"
   [dataIndex]="layoutNode?.dataType === 'array' ? (dataIndex || []).concat(i) : dataIndex"

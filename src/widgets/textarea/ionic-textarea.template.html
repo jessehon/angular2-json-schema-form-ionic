@@ -17,7 +17,7 @@
         [attr.placeholder]="options?.placeholder"
         [readonly]="options?.readonly"
         [attr.required]="options?.required"
-        [class]="options?.fieldHtmlClass || ''"
+        [ngClass]="options?.fieldHtmlClass || ''"
         [id]="'control' + layoutNode?._id"
         (blur)="updateValue($event)"
     >

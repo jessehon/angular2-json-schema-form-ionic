@@ -19,7 +19,7 @@
         [attr.pattern]="options?.pattern"
         [attr.placeholder]="options?.placeholder"
         [attr.required]="options?.required"
-        [class]="options?.fieldHtmlClass || ''"
+        [ngClass]="options?.fieldHtmlClass || ''"
         [id]="'control' + layoutNode?._id"
         [readonly]="options?.readonly"
         [type]="layoutNode?.type"
