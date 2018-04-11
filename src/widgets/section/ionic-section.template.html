@@ -8,8 +8,8 @@
         <ionic-root-widget
             [dataIndex]="dataIndex"
             [layout]="layoutNode.items"
-            [layoutIndex]="layoutIndex" [
-            isOrderable]="options?.orderable">
+            [layoutIndex]="layoutIndex"
+            [isOrderable]="options?.orderable">
         </ionic-root-widget>
     </ion-list>
     <ion-list *ngIf="containerType === 'fieldset'" [ngClass]="options?.htmlClass || ''">
